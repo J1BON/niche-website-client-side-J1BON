@@ -1,0 +1,13 @@
+.btn-nav {
+  border: 2px solid black;
+  color: rgba(0, 0, 0, 0.644);
+  height: 45px;
+  font-weight: 700;
+}
+
+.btn-nav:hover {
+  border: 2px solid black;
+  color: #fff !important;
+  background: black;
+  height: 45px;
+}
