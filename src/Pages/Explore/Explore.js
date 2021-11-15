@@ -5,7 +5,7 @@ import Service from "../Home/Service/Service";
 const Explore = () => {
   const [explors, setExplors] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/products")
+    fetch("https://immense-mesa-85677.herokuapp.com/products")
       .then((res) => res.json())
       .then((data) => setExplors(data));
   }, []);

@@ -9,12 +9,14 @@ const AddReview = () => {
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
     console.log(data);
-    axios.post("http://localhost:5000/ratings", data).then((res) => {
-      if (res.data.insertedId) {
-        alert("Package booked successfully");
-        reset();
-      }
-    });
+    axios
+      .post("https://immense-mesa-85677.herokuapp.com/ratings", data)
+      .then((res) => {
+        if (res.data.insertedId) {
+          alert("Package booked successfully");
+          reset();
+        }
+      });
   };
   const { user } = useAuth();
   return (

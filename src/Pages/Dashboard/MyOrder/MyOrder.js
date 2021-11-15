@@ -13,7 +13,7 @@ const MyOrder = () => {
     console.log(data);
   };
   useEffect(() => {
-    fetch(`http://localhost:5000/orders/${user?.email}`)
+    fetch(`https://immense-mesa-85677.herokuapp.com/orders/${user?.email}`)
       .then((res) => res.json())
       .then((data) => setOrders(data));
   }, [user.email]);
@@ -21,7 +21,7 @@ const MyOrder = () => {
   const handleDeleteOrder = (id) => {
     const proceed = window.confirm("Are you sure,you want to delete?");
     if (proceed) {
-      const url = `http://localhost:5000/orders/${id}`;
+      const url = `https://immense-mesa-85677.herokuapp.com/orders/${id}`;
       fetch(url, {
         method: "DELETE",
       })

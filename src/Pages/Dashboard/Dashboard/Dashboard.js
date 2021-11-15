@@ -3,7 +3,6 @@ import "./Dashboard.css";
 import { useEffect } from "react";
 import { Switch, Route, Link, useRouteMatch } from "react-router-dom";
 import MyOrder from "../MyOrder/MyOrder";
-import Review from "./../../Home/Review/Review";
 import AddService from "../AddService/AddService";
 import ManageOrder from "../ManageOrder/ManageOrder";
 import AddReview from "./../AddReview/AddReview";
@@ -15,7 +14,7 @@ const Dashboard = () => {
   const { user } = useAuth();
   const [isAdmin, setIsAdmin] = useState(false);
   useEffect(() => {
-    fetch(`http://localhost:5000/checkAdmin/${user.email}`)
+    fetch(`https://immense-mesa-85677.herokuapp.com/checkAdmin/${user.email}`)
       .then((res) => res.json())
       .then((data) => {
         if (data[0]?.role === "admin") {

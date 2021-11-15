@@ -10,7 +10,7 @@ const Detail = () => {
   const { bookingId } = useParams();
   console.log(bookingId);
   useEffect(() => {
-    fetch(`http://localhost:5000/products/${bookingId}`)
+    fetch(`https://immense-mesa-85677.herokuapp.com/products/${bookingId}`)
       .then((res) => res.json())
       .then((data) => setPakage(data));
   }, []);
@@ -18,12 +18,14 @@ const Detail = () => {
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
     console.log(data);
-    axios.post("http://localhost:5000/orders", data).then((res) => {
-      if (res.data.insertedId) {
-        alert("Package booked successfully");
-        reset();
-      }
-    });
+    axios
+      .post("https://immense-mesa-85677.herokuapp.com/orders", data)
+      .then((res) => {
+        if (res.data.insertedId) {
+          alert("Package booked successfully");
+          reset();
+        }
+      });
   };
   const { user } = useAuth();
 

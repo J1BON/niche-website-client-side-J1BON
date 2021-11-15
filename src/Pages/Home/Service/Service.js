@@ -22,24 +22,6 @@ const Service = ({ drones }) => {
         </div>
       </div>
     </div>
-
-    //     <Col>
-    //     <Card className="shadow">
-    //     <Card.Img variant="top" src={img} />
-    //     <Card.Body>
-    //       <Card.Title>{name}</Card.Title>
-    //       <Card.Text>
-    //         {description}
-    //       </Card.Text>
-    //       <h5>${price}</h5>
-    //       <Link to={`/booking/${_id}`}>
-    //       <Button variant="primary" size="lg">
-    //   Book now
-    // </Button>
-    //       </Link>
-    //     </Card.Body>
-    //   </Card>
-    // </Col>
   );
 };
 

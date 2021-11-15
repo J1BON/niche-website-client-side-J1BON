@@ -7,12 +7,14 @@ const AddService = () => {
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
     console.log(data);
-    axios.post("http://localhost:5000/products", data).then((res) => {
-      if (res.data.insertedId) {
-        alert("added succesfully");
-        reset();
-      }
-    });
+    axios
+      .post("https://immense-mesa-85677.herokuapp.com/products", data)
+      .then((res) => {
+        if (res.data.insertedId) {
+          alert("added succesfully");
+          reset();
+        }
+      });
   };
   return (
     <div className="add-service">

@@ -5,7 +5,7 @@ import { Table } from "react-bootstrap";
 const ManageOrder = () => {
   const [manageOrder, setManageOrder] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/orders")
+    fetch("https://immense-mesa-85677.herokuapp.com/orders")
       .then((res) => res.json())
       .then((data) => setManageOrder(data));
   }, []);
@@ -14,7 +14,7 @@ const ManageOrder = () => {
   const handleDeleteOrder = (id) => {
     const proceed = window.confirm("Are you sure,you want to delete?");
     if (proceed) {
-      const url = `http://localhost:5000/orders/${id}`;
+      const url = `https://immense-mesa-85677.herokuapp.com/orders/${id}`;
       fetch(url, {
         method: "DELETE",
       })
