@@ -29,22 +29,25 @@ const AddReview = () => {
         <div className="col-sm-12 col-md-12 col-lg-6 from-area">
           <form onSubmit={handleSubmit(onSubmit)}>
             <input
-              {...register("name", { required: true, maxLength: 20 })}
+              {...register("name", { required: true })}
               placeholder="Full name"
               value={user.displayName}
             />
             <input
               type="hidden"
-              {...register("img", { required: true })}
-              placeholder="Full name"
+              {...register("img")}
+              placeholder="Image"
               value={user.photoURL}
             />
             <br />
-            <textarea {...register("text")} placeholder="Your Feedback" />
+            <textarea
+              {...register("text", { required: true })}
+              placeholder="Your Feedback"
+            />
             <br />
             <input
               type="number"
-              {...register("rating", { min: 1, max: 5 })}
+              {...register("rating", { required: true, min: 1, max: 5 })}
               placeholder="Rating 1-5"
             />
             <br />
