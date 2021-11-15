@@ -13,7 +13,7 @@ const AddReview = () => {
       .post("https://immense-mesa-85677.herokuapp.com/ratings", data)
       .then((res) => {
         if (res.data.insertedId) {
-          alert("Package booked successfully");
+          alert("Review added successfully");
           reset();
         }
       });

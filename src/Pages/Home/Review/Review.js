@@ -6,7 +6,7 @@ import useAuth from "../../../hooks/useAuth";
 const Review = () => {
   const [ratings, setRatings] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/ratings")
+    fetch("https://immense-mesa-85677.herokuapp.com/ratings")
       .then((res) => res.json())
       .then((data) => setRatings(data));
   }, []);
